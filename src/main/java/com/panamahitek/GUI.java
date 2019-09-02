@@ -59,6 +59,7 @@ public class GUI extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Monty Hall Experiment");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Condiciones del experimento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 0, 16))); // NOI18N
 
@@ -292,10 +293,11 @@ public class GUI extends javax.swing.JFrame {
             long winAndNoChange = 0;
             long lossAndChange = 0;
             long lossAndNoChange = 0;
+
+            //Cantidad de opciones (puertas)
+            int options = Integer.parseInt(jTextField4.getText());
             //Se ejecuta un loop que repetira el algoritmo la cantidad de veces que el usuario especifique
             for (long i = 1; i <= Long.parseLong(jTextField3.getText()); i++) {
-                //Cantidad de opciones (puertas)
-                int options = Integer.parseInt(jTextField4.getText());
                 //Se agregan las opciones a una lista
                 List<Integer> doors = new ArrayList<>();
                 for (int j = 1; j <= options; j++) {
